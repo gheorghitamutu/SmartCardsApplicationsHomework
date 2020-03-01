@@ -1,0 +1,42 @@
+{
+  "merchant_public_key": "mpbk.pem",
+  "merchant_private_key": "mpvk.pem",
+  "payment_gateway_public_key": "pgpbk.pem",
+  "payment_gateway_private_key": "pgpvk.pem",
+  "log_file": "log_file",
+  "clients": [
+    {
+      "card_number": "1234 1234 1234 1234",
+      "card_expiration_date": "22/22",
+      "code": "123",
+      "amount": "123",
+      "order": "1 random thing"
+    }
+  ],
+  "payment_gateways": [
+    {
+      "card_number": "1234 1234 1234 1234",
+      "card_expiration_date": "22/22",
+      "code": "123",
+      "amount": "123"
+    }
+  ],
+  "resolutions": {
+    "error_step_4": false,
+    "error_step_6": false
+  },
+  "client_address": "127.0.0.1",
+  "client_aes_password": "password",
+  "merchant_address": "127.0.0.1",
+  "merchant_port": 50001,
+  "merchant_aes_password": "password",
+  "payment_gateway_address": "127.0.0.1",
+  "payment_gateway_port": 50002,
+  "payment_gateway_aes_password": "password",
+  "payment_gateway_response_code": {
+    "0": "Transaction does not exist/reached PG!",
+    "1": "Invalid card data!",
+    "2": "Insufficient funds!",
+    "3": "Successful transaction!"
+  }
+}
