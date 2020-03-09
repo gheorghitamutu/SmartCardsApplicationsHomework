@@ -1,6 +1,6 @@
 from Crypto.PublicKey import RSA
 
-from config import get_config_json, get_logger
+from config.config_helper import *
 
 
 def generate_certificates():

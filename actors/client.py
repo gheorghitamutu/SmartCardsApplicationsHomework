@@ -98,7 +98,7 @@ class Client:
         self.logger.debug('STEP 6: {} {}'.format(sid, self.config['payment_gateway_response_code'][str(code)]))
 
     def reach_resolution(self, amount):
-        self.logger('STEP 7: {} Timeout occurred, resolution protocol initiated!'.format(self.sid))
+        self.logger.debug('STEP 7: {} Timeout occurred!'.format(self.sid))
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((self.config['payment_gateway_address'], self.config['payment_gateway_port']))
         message = '{},{},{},{}'.format(
